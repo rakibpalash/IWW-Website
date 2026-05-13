@@ -1,0 +1,57 @@
+.intro-panel {
+  padding: var(--space-10);
+}
+
+.comparison-grid {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.case-study {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+.metric-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+}
+
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.chip {
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-pill);
+  background: rgba(56, 58, 153, 0.08);
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.article-hero-image img,
+.gallery-grid img {
+  width: 100%;
+  border-radius: var(--radius-lg);
+  object-fit: cover;
+}
+
+.article-hero-image img {
+  height: 420px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.gallery-grid img {
+  height: 220px;
+}

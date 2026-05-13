@@ -1,0 +1,13 @@
+{
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "devCommand": null,
+  "installCommand": null,
+  "framework": null,
+  "rewrites": [
+    {
+      "source": "/((?!assets|\\.[\\w]+$).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
