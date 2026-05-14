@@ -6,6 +6,22 @@
   "framework": null,
   "rewrites": [
     {
+      "source": "/blog",
+      "destination": "/blog.html"
+    },
+    {
+      "source": "/blog/",
+      "destination": "/blog.html"
+    },
+    {
+      "source": "/blog/:slug",
+      "destination": "/blogs/:slug.html"
+    },
+    {
+      "source": "/blog/:slug/",
+      "destination": "/blogs/:slug.html"
+    },
+    {
       "source": "/((?!assets|\\.[\\w]+$).*)",
       "destination": "/index.html"
     }

@@ -1,0 +1,12 @@
+{
+  "name": "blog-migration",
+  "version": "1.0.0",
+  "description": "Blog migration script for Insta Web Works",
+  "main": "migrate-blogs.js",
+  "scripts": {
+    "migrate": "node migrate-blogs.js"
+  },
+  "dependencies": {
+    "node-html-parser": "^6.1.13"
+  }
+}

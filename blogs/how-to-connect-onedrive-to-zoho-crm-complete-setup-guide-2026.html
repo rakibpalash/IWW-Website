@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Connect OneDrive to Zoho CRM — Complete Setup Guide (2026) | Insta Web Works</title>
+  <meta name="description" content="Connect OneDrive to Zoho CRM in 10–15 minutes. Install the extension, authenticate, auto-create folders, sync attachments, and manage files inside CRM.">
+  <meta property="og:title" content="How to Connect OneDrive to Zoho CRM — Complete Setup Guide (2026)">
+  <meta property="og:description" content="Connect OneDrive to Zoho CRM in 10–15 minutes. Install the extension, authenticate, auto-create folders, sync attachments, and manage files inside CRM.">
+  <meta property="og:image" content="https://instawebworks.com.au/wp-content/uploads/2026/03/How-to-Connect-OneDrive-to-Zoho-CRM-—-Complete-Setup-Guide-2026-img.webp">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-03-03">
+  <meta property="article:author" content="Insta Web Works Editorial Team">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/typography.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="canonical" href="https://instawebworks.com.au/blog/how-to-connect-onedrive-to-zoho-crm-complete-setup-guide-2026/">
+  <meta name="robots" content="index, follow">
+  <style>
+    .blog-content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+    .blog-content-wrapper h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-text-primary);
+      scroll-margin-top: 100px;
+    }
+    .blog-content-wrapper h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-text-primary);
+    }
+    .blog-content-wrapper p {
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: var(--color-text-secondary);
+    }
+    .blog-content-wrapper ul, .blog-content-wrapper ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+    .blog-content-wrapper li {
+      margin-bottom: 0.75rem;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+    }
+    .blog-content-wrapper a {
+      color: var(--color-primary);
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .blog-content-wrapper a:hover {
+      color: var(--color-primary-dark);
+    }
+    .blog-content-wrapper blockquote {
+      border-left: 4px solid var(--color-primary);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      background: var(--color-bg-tertiary);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: var(--color-text-primary);
+    }
+    .blog-content-wrapper pre {
+      background: var(--color-bg-secondary);
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 2rem 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+    }
+    .blog-content-wrapper code {
+      background: var(--color-bg-secondary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+    .blog-content-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background: var(--color-bg-primary);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .blog-content-wrapper th {
+      background: var(--color-primary);
+      color: white;
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .blog-content-wrapper td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-text-secondary);
+    }
+    .blog-content-wrapper tr:last-child td {
+      border-bottom: none;
+    }
+    .blog-content-wrapper .box, .blog-content-wrapper .callout, .blog-content-wrapper .success {
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      background: var(--color-bg-tertiary);
+      border-left: 4px solid var(--color-primary);
+    }
+    .blog-content-wrapper .success {
+      border-left-color: #10b981;
+      background: rgba(16, 185, 129, 0.1);
+    }
+    .blog-content-wrapper .quick-nav {
+      background: var(--color-bg-secondary);
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .blog-content-wrapper .quick-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0.75rem;
+    }
+    .blog-content-wrapper .quick-nav a {
+      color: var(--color-text-primary);
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .blog-content-wrapper .quick-nav a:hover {
+      background: var(--color-bg-tertiary);
+    }
+    .blog-content-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .blog-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .blog-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+    }
+    .blog-meta-item i {
+      color: var(--color-primary);
+    }
+    .blog-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+    }
+    .blog-tag {
+      background: var(--color-bg-secondary);
+      color: var(--color-text-primary);
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .blog-tag:hover {
+      background: var(--color-primary);
+      color: white;
+    }
+    .share-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .share-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      transition: transform 0.2s, opacity 0.2s;
+      text-decoration: none;
+    }
+    .share-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+    .share-btn.facebook { background: #1877f2; }
+    .share-btn.twitter { background: #000; }
+    .share-btn.linkedin { background: #0077b5; }
+    .share-btn.whatsapp { background: #25d366; }
+  </style>
+</head>
+<body class="site-shell">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div data-component="header"></div>
+  <main id="main-content">
+    <!-- Blog Header -->
+    <section class="page-banner">
+      <div class="container-wide">
+        <div class="page-banner-card stack-md">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/index.html">Home</a>
+            <span>/</span>
+            <a href="/blog.html">Blog</a>
+            <span>/</span>
+            <span class="current">How to Connect OneDrive to Zoho CRM — Complete Setup Guide (2026)</span>
+          </nav>
+          <span class="section-eyebrow">Easy OneDrive for Zoho CRM</span>
+          <h1>How to Connect OneDrive to Zoho CRM — Complete Setup Guide (2026)</h1>
+          <p class="lead">Connect OneDrive to Zoho CRM in 10–15 minutes. Install the extension, authenticate, auto-create folders, sync attachments, and manage files inside CRM.</p>
+          <div class="blog-meta">
+            <div class="blog-meta-item">
+              <i class="fas fa-user"></i>
+              <span>Insta Web Works Editorial Team</span>
+            </div>
+            <div class="blog-meta-item">
+              <i class="fas fa-calendar"></i>
+              <span>2026-03-03</span>
+            </div>
+            <div class="blog-meta-item">
+              <i class="fas fa-clock"></i>
+              <span>10 min read</span>
+            </div>
+            <div class="blog-meta-item">
+              <i class="fas fa-tag"></i>
+              <span>Insta Web Works</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Image -->
+    <section class="section-sm">
+      <div class="container-wide article-hero-image">
+        <img src="https://instawebworks.com.au/wp-content/uploads/2026/03/How-to-Connect-OneDrive-to-Zoho-CRM-—-Complete-Setup-Guide-2026-img.webp" alt="How to Connect OneDrive to Zoho CRM — Complete Setup Guide (2026)" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="section">
+      <div class="container-wide content-grid">
+        <article class="blog-content-wrapper">
+          
+				<div class="elementor-widget-container">
+							<div data-elementor-type="wp-post" data-elementor-id="15900" class="elementor elementor-15900" data-elementor-post-type="post">
+				<div class="has_eae_slider elementor-element elementor-element-1349c98 e-flex e-con-boxed e-con e-parent" data-eae-slider="54113" data-id="1349c98" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-1e1e89c elementor-widget elementor-widget-html" data-id="1e1e89c" data-element_type="widget" data-widget_type="html.default">
+				<div class="elementor-widget-container">
+					
+
+
+
+
+
+
+
+<div class="container">
+
+
+
+  <h2>How to Connect OneDrive to Zoho CRM (Step-by-Step Guide 2026)</h2>
+
+  
+  <div class="box">
+    <p> To connect OneDrive to Zoho CRM, install <a href="https://instawebworks.com.au/onedrive-for-zoho-crm/" target="_blank" rel="noopener">Easy OneDrive for Zoho CRM</a> from Zoho Marketplace, authenticate your OneDrive connection in the extension settings, confirm the default workflows + <span class="ui">easyOnedrive</span> related list are created, then set your folder naming/subfolders and run <span class="ui">sync attachments</span> from inside a record to pull CRM attachments into OneDrive.</p>
+  </div>
+
+
+  <div class="quick-nav">
+    <h2>Quick Navigation</h2>
+    <ul>
+      <li><a href="#before-you-start">Before You Start — What You Need to Know</a></li>
+      <li><a href="#step-1">Step 1: Install Easy OneDrive for Zoho CRM (2 minutes)</a></li>
+      <li><a href="#step-2">Step 2: Authenticate OneDrive (3 minutes)</a></li>
+      <li><a href="#step-3">Step 3: Configure Default Folder Settings (5 minutes)</a></li>
+      <li><a href="#step-4">Step 4: Set Up Workflow Automation (5 minutes)</a></li>
+      <li><a href="#step-5">Step 5: Enable Attachment Sync (2 minutes)</a></li>
+      <li><a href="#step-6">Step 6: Test the Integration (3 minutes)</a></li>
+      <li><a href="#advanced">Advanced Configuration Options</a></li>
+      <li><a href="#troubleshooting">Troubleshooting Common Issues</a></li>
+      <li><a href="#best-practices">Best Practices</a></li>
+      <li><a href="#next-steps">What to Do After Setup</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+  </div>
+
+  <h2 class="anchor" id="before-you-start">Before You Start — What You Need to Know</h2>
+
+  <p>
+    Most teams don’t struggle because OneDrive or Zoho CRM is “bad.” They struggle because files end up in three places:
+    CRM attachments, someone’s desktop, and a shared drive with inconsistent folder names.
+  </p>
+
+  <p>
+    A clean integration solves that by making a simple rule: Zoho CRM is the place you work, OneDrive is the place files live.
+    That way your sales team stays in the record, and your documents stay organized in OneDrive with consistent structure.
+  </p>
+
+  <div class="callout">
+    <strong>💡 Pro Tip</strong>
+    Decide your naming rule before you install (example: <span class="ui">DealName-DealID</span>). If you change naming later, you can accidentally create parallel folder trees.
+  </div>
+
+  <div class="warn">
+    <strong>⚠️ Common Mistake</strong>
+    Authentication fails if OneDrive isn’t activated or if you’re logged into the wrong Microsoft account/workspace. Sort this out first to avoid looping permissions screens.
+  </div>
+
+  <h2 class="anchor" id="step-1">Step 1: Install Easy OneDrive for Zoho CRM</h2>
+
+  <ol class="steps">
+    <li>Open <span class="ui">Zoho Marketplace</span> from your Zoho CRM org.</li>
+    <li>Search for <span class="ui">Easy OneDrive for Zoho CRM</span>.</li>
+    <li>Click <span class="ui">Start Free Trial</span> (or <span class="ui">Install</span> if you’re purchasing).</li>
+    <li>Select users/profiles, then confirm installation.</li>
+  </ol>
+
+  <div class="success">
+    <strong>✓ Success looks like…</strong>
+    After install, Zoho redirects you to the extension’s <span class="ui">Settings</span> page inside CRM.
+  </div>
+
+  <h2 class="anchor" id="step-2">Step 2: Authenticate OneDrive</h2>
+
+  <ol class="steps">
+    <li>On the extension <span class="ui">Settings</span> page, click <span class="ui">Authenticate</span> / <span class="ui">Connect</span> (label may vary).</li>
+    <li>Log in to your Microsoft account (choose the correct Business tenant if prompted).</li>
+    <li>Click <span class="ui">Allow</span> to grant access.</li>
+    <li>Return to Zoho CRM and confirm the connection shows as <span class="ui">Connected</span>.</li>
+  </ol>
+
+  <div class="callout">
+    <strong>💡 Pro Tip</strong>
+    The data center URL is usually selected automatically. Still, if your org uses a specific DC, double-check it before moving on.
+  </div>
+
+  <div class="success">
+    <strong>✓ Success looks like…</strong>
+    You can see the connected account, and the extension settings load without errors.
+  </div>
+
+  <h2 class="anchor" id="step-3">Step 3: Configure Default Folder Settings</h2>
+
+  <p>
+    During installation, the extension sets up default behavior for these modules:
+    <span class="ui">Leads</span>, <span class="ui">Contacts</span>, <span class="ui">Accounts</span>, <span class="ui">Deals</span>, and <span class="ui">Campaigns</span>.
+    A Team folder structure is also created with root folders for those default modules.
+  </p>
+
+  <ol class="steps">
+    <li>Open the extension <span class="ui">Module Settings</span>.</li>
+    <li>Choose your default naming convention for record folders (example: <span class="ui">{RecordName}-{RecordID}</span>).</li>
+    <li>If you want subfolders (recommended), add them in the module settings (example: <span class="ui">Proposals</span>, <span class="ui">Contracts</span>, <span class="ui">Invoices</span>).</li>
+    <li>If you need record-based naming, use merge fields (you can access fields using the <span class="ui">#</span> symbol).</li>
+    <li>Click <span class="ui">Save</span>.</li>
+  </ol>
+
+
+  <div class="warn">
+    <strong>⚠️ Common Mistake</strong>
+    Don’t use special characters that OneDrive doesn’t accept in folder names. Keep it simple: letters, numbers, spaces, hyphens.
+  </div>
+
+  <div class="success">
+    <strong>✓ Success looks like…</strong>
+    Your module settings save successfully, and new records begin creating folders with your chosen structure.
+  </div>
+
+  <h2 class="anchor" id="step-4">Step 4: Set Up Workflow Automation</h2>
+
+  <p>
+    The extension creates default workflows to create folders when records are created.
+    This is powerful because you can adjust it to match your business process (for example, only create folders for qualified leads).
+  </p>
+
+  <ol class="steps">
+    <li>Go to <span class="ui">Zoho CRM Settings</span> → <span class="ui">Automation</span> → <span class="ui">Workflow Rules</span>.</li>
+    <li>Open the default workflow for a module (start with <span class="ui">Deals</span>).</li>
+    <li>Review the trigger (<span class="ui">On Create</span> is common) and set criteria if needed.</li>
+    <li>Confirm the action is configured to create the OneDrive folder using <span class="ui">easyOnedrive</span> settings.</li>
+    <li><span class="ui">Save</span> and ensure it’s <span class="ui">Active</span>.</li>
+  </ol>
+
+  <div class="callout">
+    <strong>💡 Pro Tip</strong>
+    If you want fewer “empty folders,” trigger folder creation on a meaningful milestone (like Deal stage moving to <span class="ui">Qualified</span> or <span class="ui">Proposal</span>).
+  </div>
+
+  <div class="success">
+    <strong>✓ Success looks like…</strong>
+    New records automatically generate folders in the correct OneDrive root, without users doing anything manual.
+  </div>
+
+  <h2 class="anchor" id="step-5">Step 5: Enable Attachment Sync (2 minutes)</h2>
+
+  <p>
+    This is the step most teams love because it cleans up “attachments vs folders” confusion.
+    You can download Zoho record attachments into the associated OneDrive folder directly from the widget.
+  </p>
+
+  <ol class="steps">
+    <li>Open any test record (for example, a <span class="ui">Deal</span>).</li>
+    <li>Scroll to related lists and click <span class="ui">easyOnedrive</span>.</li>
+    <li>In the widget, click the <span class="ui">settings icon</span>.</li>
+    <li>Click <span class="ui">sync attachments</span>.</li>
+  </ol>
+
+  <div class="success">
+    <strong>✓ Success looks like…</strong>
+    The files appear inside the OneDrive folder. If you add new attachments later, only the new ones download (older ones won’t duplicate).
+  </div>
+
+  <h2 class="anchor" id="step-6">Step 6: Test the Integration (3 minutes)</h2>
+
+  <ol class="steps">
+    <li>Create a test record (or update one) and confirm a folder exists in OneDrive.</li>
+    <li>Upload a test document from inside the widget.</li>
+    <li>Preview the file directly (no download needed).</li>
+    <li>Generate a <span class="ui">share link</span> from widget settings and open it in a private browser window.</li>
+    <li>Try a rename or move/copy to confirm day-to-day file handling works.</li>
+  </ol>
+
+  <div class="success">
+    <strong>✓ Success looks like…</strong>
+    You can manage files from the record: browse, upload, preview, rename/delete, copy/move, refresh, and create links.
+  </div>
+
+  <h2 class="anchor" id="advanced">Advanced Configuration Options</h2>
+
+  <h3>1) Add subfolders for default modules (the right way)</h3>
+  <p>
+    In module settings, click the <span class="ui">+</span> button to add subfolder options.
+    You can use plain text names or merge fields (use <span class="ui">#</span> to access record fields).
+  </p>
+
+  <h3>2) Custom modules setup (Root Folder ID + optional Share URL)</h3>
+  <p>
+    For custom modules, create a single-line field for <span class="ui">Root Folder ID</span>.
+    If you want to store a share link, add a URL field for <span class="ui">Share URL</span>.
+    Then create a workflow that creates the folder and saves the folder ID (and share URL if enabled).
+  </p>
+
+  <h3>3) Create conditional subfolders when Root Folder ID already exists (Dynamic Root Folder)</h3>
+  <p>
+    Example: when a Deal becomes <span class="ui">Closed Won</span>, create a “Closed Won Pack” subfolder.
+    Use workflow action <span class="ui">Create Onedrive Setting (easyOnedrive)</span> → <span class="ui">Create Folder</span> →
+    choose <span class="ui">Dynamic Root Folder</span> → select the field where Root Folder ID is saved.
+  </p>
+
+  <h3>4) Delete folders by workflow (use carefully)</h3>
+  <p>
+    You can delete folders when a condition is met (for example, record marked as duplicate).
+    Use a workflow trigger <span class="ui">On Edit</span>, add criteria, then action:
+    <span class="ui">Create Onedrive Setting (easyOnedrive)</span> → <span class="ui">Delete Folder</span> → select the folder ID field.
+  </p>
+
+  <div class="warn">
+    <strong>⚠️ Common Mistake</strong>
+    Don’t start with deletion. Start with “archive” behavior (rename) so you can recover easily if someone triggers it by mistake.
+  </div>
+
+  <h2 class="anchor" id="troubleshooting">Troubleshooting Common Issues</h2>
+
+  <h3>Authentication fails or keeps redirecting</h3>
+  <ul>
+    <li>Confirm OneDrive is activated for the Microsoft account you’re using.</li>
+    <li>Make sure you’re signing into the correct Business tenant/workspace.</li>
+    <li>Reconnect from extension settings and approve permissions again.</li>
+  </ul>
+
+  <h3>Folders aren’t being created</h3>
+  <ul>
+    <li>Check the workflow rule is <span class="ui">Active</span>.</li>
+    <li>Confirm workflow criteria is met.</li>
+    <li>Confirm naming rules don’t include unsupported characters.</li>
+  </ul>
+
+  <h3>Attachments didn’t sync</h3>
+  <ul>
+    <li>Open the record → <span class="ui">easyOnedrive</span> related list → settings → <span class="ui">sync attachments</span>.</li>
+    <li>Use <span class="ui">Refresh</span> in widget settings.</li>
+    <li>Test with a small file first.</li>
+  </ul>
+
+  <h3>Permissions issues</h3>
+  <ul>
+    <li>Make sure the connected OneDrive account has access to the root folder location.</li>
+    <li>For OneDrive Business, confirm your organization policies allow third-party integrations.</li>
+  </ul>
+
+  <h2 class="anchor" id="best-practices">Best Practices</h2>
+  <ul>
+    <li>Start with <span class="ui">Deals</span> first, then expand to Accounts/Contacts.</li>
+    <li>Include a unique identifier in folder naming (IDs prevent duplicates).</li>
+    <li>Use standard subfolders so everyone files documents the same way.</li>
+    <li>Prefer share links over emailing attachments (fewer version mistakes).</li>
+    <li>Set workflows around milestones (Qualified, Proposal, Closed Won).</li>
+    <li>Train the team: “File work happens in the <span class="ui">easyOnedrive</span> related list.”</li>
+  </ul>
+
+  <div class="callout">
+    <strong>[Embed 5-minute setup video here]</strong>
+    Replace this box with your YouTube embed. A short “install + connect + first folder” video improves conversions.
+  </div>
+
+  <h2 class="anchor" id="next-steps">What to Do After Setup — Next Steps</h2>
+  <ol class="steps">
+    <li>Roll the setup to your primary team (start with Deals).</li>
+    <li>Add subfolders that match your process (Proposals, Contracts, Invoices).</li>
+    <li>Create one stage-based workflow (Closed Won → create “Signed” folder).</li>
+    <li>Sync attachments for your top 20 active records to clean up history.</li>
+    <li>Write a one-page SOP so everyone follows the same habits.</li>
+  </ol>
+
+  <h2 class="anchor" id="faq">FAQ</h2>
+
+  <h3>Does OneDrive integrate with Zoho CRM?</h3>
+  <p>Yes. Install Easy OneDrive for Zoho CRM from Zoho Marketplace and authenticate the connection in the extension settings.</p>
+
+  <h3>Will it create folders automatically?</h3>
+  <p>Yes. Default workflows can create folders for Leads, Contacts, Accounts, Deals, and Campaigns. You can change conditions and naming rules.</p>
+
+  <h3>How do I sync CRM attachments into OneDrive?</h3>
+  <p>Open the record → click the <span class="ui">easyOnedrive</span> related list → settings icon → <span class="ui">sync attachments</span>.</p>
+
+  <h3>Can I create subfolders for each record automatically?</h3>
+  <p>Yes. Add subfolder options in module settings using the <span class="ui">+</span> button. Use <span class="ui">#</span> for merge fields if needed.</p>
+
+  <h3>Can I use this for custom modules?</h3>
+  <p>Yes. Add a Root Folder ID field (optional Share URL field), create a workflow to create the folder and save the ID, then install the OneDrive widget as a related list.</p>
+
+  <h3>Can I create a subfolder when a deal becomes Closed Won?</h3>
+  <p>Yes. Use a workflow action with <span class="ui">Dynamic Root Folder</span> and choose the field where the Root Folder ID is saved.</p>
+
+  <h3>Can I delete folders automatically?</h3>
+  <p>Yes, using a workflow rule with a condition and the folder ID field. For safety, consider rename/archive first.</p>
+
+  <h3>What can users do inside Zoho CRM after setup?</h3>
+  <p>Users can browse, upload, preview, rename/delete, copy/move, refresh, sync attachments, and generate share/download links directly from the record widget.</p>
+
+</div>				</div>
+				</div>
+		<div class="has_eae_slider elementor-element elementor-element-bda2b79 e-con-full e-flex e-con e-child" data-eae-slider="86443" data-id="bda2b79" data-element_type="container">
+		<div class="has_eae_slider elementor-element elementor-element-b21dcea e-con-full e-flex e-con e-child" data-eae-slider="81135" data-id="b21dcea" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;gradient&quot;}">
+		<div class="has_eae_slider elementor-element elementor-element-b4a9438 e-con-full e-flex e-con e-child" data-eae-slider="17277" data-id="b4a9438" data-element_type="container">
+				<div class="elementor-element elementor-element-a99123c elementor-widget__width-inherit elementor-widget-tablet__width-inherit elementor-vertical-align-top elementor-widget elementor-widget-image-box" data-id="a99123c" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Need Help With Setup?</h3></div></div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-8586b52 elementor-widget__width-inherit elementor-widget-tablet__width-inherit elementor-widget elementor-widget-text-editor" data-id="8586b52" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									Start your free trial or request setup support from Insta Web Works.								</div>
+				</div>
+				<div class="elementor-element elementor-element-54f3051 elementor-align-center elementor-widget__width-auto elementor-widget elementor-widget-button" data-id="54f3051" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://instawebworks.com.au/onedrive-for-zoho-crm/">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">Start Free Trial</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+						</div>
+				
+        </article>
+        
+        <!-- Sidebar with Table of Contents -->
+        <aside class="sidebar surface stack-md">
+          <h3>Table of Contents</h3>
+          <nav class="toc" aria-label="Table of contents" id="toc">
+            <!-- Auto-generated from H2 headings -->
+          </nav>
+          
+          <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
+            <h4>Share this article</h4>
+            <div class="share-buttons">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://instawebworks.com.au/blog/how-to-connect-onedrive-to-zoho-crm-complete-setup-guide-2026/" class="share-btn facebook" target="_blank" rel="noopener" aria-label="Share on Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/intent/tweet?url=https://instawebworks.com.au/blog/how-to-connect-onedrive-to-zoho-crm-complete-setup-guide-2026/&text=How to Connect OneDrive to Zoho CRM — Complete Setup Guide (2026)" class="share-btn twitter" target="_blank" rel="noopener" aria-label="Share on Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://instawebworks.com.au/blog/how-to-connect-onedrive-to-zoho-crm-complete-setup-guide-2026/&title=How to Connect OneDrive to Zoho CRM — Complete Setup Guide (2026)" class="share-btn linkedin" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://wa.me/?text=How to Connect OneDrive to Zoho CRM — Complete Setup Guide (2026)%20https://instawebworks.com.au/blog/how-to-connect-onedrive-to-zoho-crm-complete-setup-guide-2026/" class="share-btn whatsapp" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-sm">
+      <div class="container-wide" data-component="cta-section"></div>
+    </section>
+
+    <!-- Related Blogs -->
+    <section class="section">
+      <div class="container-wide">
+        <div class="section-header">
+          <div class="section-heading stack-md">
+            <span class="section-eyebrow">Related Articles</span>
+            <h2>Continue exploring more insights</h2>
+          </div>
+        </div>
+        <div class="grid grid-3" data-render="relatedBlogs"></div>
+      </div>
+    </section>
+  </main>
+  <div data-component="footer"></div>
+  
+  <script type="module">
+    // Auto-generate table of contents from H2 headings
+    document.addEventListener('DOMContentLoaded', () => {
+      const content = document.querySelector('.blog-content-wrapper');
+      const toc = document.getElementById('toc');
+      
+      if (!content || !toc) return;
+      
+      const headings = content.querySelectorAll('h2, h3');
+      if (headings.length === 0) {
+        toc.parentElement.style.display = 'none';
+        return;
+      }
+      
+      const tocHTML = Array.from(headings).map((heading, index) => {
+        const id = heading.id || `heading-${index}`;
+        heading.id = id;
+        const level = heading.tagName === 'H2' ? 'main' : 'sub';
+        const style = level === 'sub' ? 'padding-left: 1rem; font-size: 0.9em;' : '';
+        return `<a href="#${id}" style="${style}">${heading.textContent}</a>`;
+      }).join('');
+      
+      toc.innerHTML = tocHTML;
+      
+      // Update current year in footer
+      document.querySelectorAll('[data-current-year]').forEach(el => {
+        el.textContent = new Date().getFullYear();
+      });
+    });
+  </script>
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>

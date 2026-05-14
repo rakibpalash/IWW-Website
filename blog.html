@@ -37,31 +37,214 @@
     </section>
     <section class="section-sm">
       <div class="container-wide split">
-        <div class="chip-list">
-          <span class="chip">OneDrive</span><span class="chip">Dropbox</span><span class="chip">SharePoint</span><span class="chip">WorkDrive</span><span class="chip">Automation</span>
+        <div class="chip-list" id="top-categories">
+          <!-- Categories rendered dynamically -->
         </div>
         <div class="field">
-          <label for="search">Search placeholder</label>
-          <input id="search" type="search" placeholder="Search guides, integrations, and CRM insights...">
+          <label for="search-hero">Search blogs</label>
+          <input id="search-hero" type="search" placeholder="Search guides, integrations, and CRM insights...">
         </div>
       </div>
     </section>
     <section class="section">
       <div class="container-wide content-grid">
-        <div class="grid grid-2" data-render="blogs"></div>
+        <div class="grid grid-2" id="blog-grid"></div>
         <aside class="sidebar surface stack-md">
-          <h3>Sidebar UI Placeholder</h3>
-          <p>Use this area for categories, featured resources, newsletter signup, or promoted extension links once the archive becomes dynamic.</p>
-          <ul class="check-list">
-            <li>Popular integrations</li>
-            <li>Marketplace extension guides</li>
-            <li>Zoho productivity resources</li>
-          </ul>
+          <h3>Filter by Category</h3>
+          <div class="chip-list" id="category-filters"></div>
+          <h4 class="stack-sm" style="margin-top: 1.5rem;">Search</h4>
+          <div class="field">
+            <label for="search">Search blogs</label>
+            <input id="search" type="search" placeholder="Search guides, integrations, and CRM insights...">
+          </div>
         </aside>
       </div>
     </section>
   </main>
   <div data-component="footer"></div>
+  <script type="module">
+    import { blogData } from '/assets/js/blog-data.js';
+
+    // Make blog data available globally for debugging
+    window.blogPosts = blogData;
+    console.log("Total blog posts loaded:", window.blogPosts.length);
+
+    // Detect if running on VS Code Live Server (127.0.0.1:5500 or localhost:5500)
+    const isLiveServer = window.location.hostname === '127.0.0.1' || 
+                         window.location.hostname === 'localhost' && 
+                         window.location.port === '5500';
+
+    // Generate blog link - uses clean URLs for production, direct paths for Live Server
+    function getBlogLink(slug) {
+      if (isLiveServer) {
+        // Live Server fallback: link directly to blogs/{slug}.html
+        return `/blogs/${slug}.html`;
+      }
+      // Production: clean SEO URL
+      return `/blog/${slug}/`;
+    }
+
+    const blogGrid = document.getElementById('blog-grid');
+    const categoryFiltersContainer = document.getElementById('category-filters');
+    const topCategoriesContainer = document.getElementById('top-categories');
+    const searchInput = document.getElementById('search');
+    const searchHero = document.getElementById('search-hero');
+
+    // Log which mode we're in
+    if (isLiveServer) {
+      console.log("⚠️  Running on VS Code Live Server - using direct file links");
+      console.log("💡 For clean URLs, use: npm install -g vercel && vercel dev");
+    } else {
+      console.log("✓ Running on production/Vercel dev - using clean URLs");
+    }
+
+    // Extract unique categories
+    function getCategories() {
+      const categories = new Set(blogData.map(post => {
+        // Normalize category - extract main category from complex strings
+        const cat = post.category || 'Blog';
+        if (cat.includes(' for ')) {
+          return cat.split(' for ')[0];
+        }
+        if (cat.includes(':')) {
+          return cat.split(':')[0];
+        }
+        if (cat.includes('#')) {
+          return cat.split('#')[0];
+        }
+        return cat.trim();
+      }));
+      return ['All', ...Array.from(categories)].filter(Boolean);
+    }
+
+    // Render category chips
+    function renderCategoryChips() {
+      const categories = getCategories();
+      
+      // Render top categories in hero (skip 'All')
+      if (topCategoriesContainer) {
+        const topCats = categories.filter(c => c !== 'All').slice(0, 5);
+        topCategoriesContainer.innerHTML = topCats.map(cat => 
+          `<button class="chip category-chip" data-category="${cat}">${cat}</button>`
+        ).join('');
+        
+        // Add click handlers for top categories
+        topCategoriesContainer.addEventListener('click', (e) => {
+          const chip = e.target.closest('.category-chip');
+          if (!chip) return;
+          
+          document.querySelectorAll('.category-chip').forEach(c => c.classList.remove('is-active'));
+          chip.classList.add('is-active');
+          filterBlogs();
+        });
+      }
+      
+      // Render all categories in sidebar
+      if (categoryFiltersContainer) {
+        categoryFiltersContainer.innerHTML = categories.map(cat => 
+          `<button class="chip category-chip ${cat === 'All' ? 'is-active' : ''}" data-category="${cat}">${cat}</button>`
+        ).join('');
+      }
+    }
+
+    // Normalize category for filtering
+    function normalizeCategory(category) {
+      if (!category) return 'Blog';
+      if (category.includes(' for ')) {
+        return category.split(' for ')[0].trim();
+      }
+      if (category.includes(':')) {
+        return category.split(':')[0].trim();
+      }
+      if (category.includes('#')) {
+        return category.split('#')[0].trim();
+      }
+      return category.trim();
+    }
+
+    // Render blog cards
+    function renderBlogs(posts) {
+      if (!blogGrid) return;
+
+      if (posts.length === 0) {
+        blogGrid.innerHTML = '<p style="grid-column: 1 / -1; text-align: center; padding: 2rem;">No blog posts found.</p>';
+        return;
+      }
+
+      const html = posts.map(post => `
+        <article class="card surface stack-md">
+          <a href="${getBlogLink(post.slug)}" class="card-image">
+            <img src="${post.image}" alt="${post.title}" loading="lazy">
+          </a>
+          <div class="stack-sm">
+            <div class="chip-list">
+              <span class="chip">${normalizeCategory(post.category)}</span>
+              <span class="chip">${post.source}</span>
+            </div>
+            <h3><a href="${getBlogLink(post.slug)}">${post.title}</a></h3>
+            <p class="text-sm text-muted">${post.date}</p>
+            <p class="text-sm">${post.excerpt || post.title}</p>
+            <a class="btn btn-outline" href="${getBlogLink(post.slug)}">Read insight</a>
+          </div>
+        </article>
+      `).join('');
+
+      blogGrid.innerHTML = html;
+      console.log("Currently rendered posts:", posts.length);
+    }
+
+    // Filter blogs
+    function filterBlogs() {
+      const activeCategory = document.querySelector('.category-chip.is-active')?.dataset.category || 'All';
+      const searchTerm = (searchInput?.value || searchHero?.value || '').toLowerCase().trim();
+
+      const filteredPosts = blogData.filter(post => {
+        const postCategory = normalizeCategory(post.category);
+        const matchesCategory = activeCategory === 'All' || postCategory === activeCategory || post.source === activeCategory;
+        const matchesSearch = !searchTerm || 
+          post.title.toLowerCase().includes(searchTerm) ||
+          (post.excerpt && post.excerpt.toLowerCase().includes(searchTerm)) ||
+          postCategory.toLowerCase().includes(searchTerm) ||
+          post.source.toLowerCase().includes(searchTerm);
+        
+        return matchesCategory && matchesSearch;
+      });
+
+      renderBlogs(filteredPosts);
+      
+      // Sync search inputs
+      if (searchInput && searchHero) {
+        if (document.activeElement !== searchInput) searchInput.value = searchTerm;
+        if (document.activeElement !== searchHero) searchHero.value = searchTerm;
+      }
+    }
+
+    // Handle category chip clicks
+    function initCategoryFilters() {
+      categoryFiltersContainer?.addEventListener('click', (e) => {
+        const chip = e.target.closest('.category-chip');
+        if (!chip) return;
+        
+        document.querySelectorAll('.category-chip').forEach(c => c.classList.remove('is-active'));
+        chip.classList.add('is-active');
+        filterBlogs();
+      });
+    }
+
+    // Handle search input
+    function initSearch() {
+      searchInput?.addEventListener('input', filterBlogs);
+      searchHero?.addEventListener('input', filterBlogs);
+    }
+
+    // Initialize
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCategoryChips();
+      renderBlogs(blogData);
+      initCategoryFilters();
+      initSearch();
+    });
+  </script>
   <script type="module" src="/assets/js/main.js"></script>
 </body>
 </html>

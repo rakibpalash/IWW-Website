@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zoho Cliq Deluge Code Backup | Insta Web Works</title>
+  <meta name="description" content="Automate version control and backup for all your Zoho Cliq Deluge scripts. Learn why Zoho Cliq Deluge Code Backup is essential for developers and admins.">
+  <meta property="og:title" content="Zoho Cliq Deluge Code Backup">
+  <meta property="og:description" content="Automate version control and backup for all your Zoho Cliq Deluge scripts. Learn why Zoho Cliq Deluge Code Backup is essential for developers and admins.">
+  <meta property="og:image" content="https://easy-pluginz.com/wp-content/uploads/2025/12/Deluge-Code-Backup-for-Cliq.jpg">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2025-12-04">
+  <meta property="article:author" content="Insta Web Works Editorial Team">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/typography.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="canonical" href="https://instawebworks.com.au/blog/zoho-cliq-deluge-code-backup/">
+  <meta name="robots" content="index, follow">
+  <style>
+    .blog-content-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+    .blog-content-wrapper h2 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      color: var(--color-text-primary);
+      scroll-margin-top: 100px;
+    }
+    .blog-content-wrapper h3 {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      color: var(--color-text-primary);
+    }
+    .blog-content-wrapper p {
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: var(--color-text-secondary);
+    }
+    .blog-content-wrapper ul, .blog-content-wrapper ol {
+      margin: 1.5rem 0;
+      padding-left: 2rem;
+    }
+    .blog-content-wrapper li {
+      margin-bottom: 0.75rem;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+    }
+    .blog-content-wrapper a {
+      color: var(--color-primary);
+      text-decoration: underline;
+      transition: color 0.2s;
+    }
+    .blog-content-wrapper a:hover {
+      color: var(--color-primary-dark);
+    }
+    .blog-content-wrapper blockquote {
+      border-left: 4px solid var(--color-primary);
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      background: var(--color-bg-tertiary);
+      border-radius: 0 8px 8px 0;
+      font-style: italic;
+      color: var(--color-text-primary);
+    }
+    .blog-content-wrapper pre {
+      background: var(--color-bg-secondary);
+      padding: 1.5rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 2rem 0;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+    }
+    .blog-content-wrapper code {
+      background: var(--color-bg-secondary);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+    }
+    .blog-content-wrapper table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background: var(--color-bg-primary);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .blog-content-wrapper th {
+      background: var(--color-primary);
+      color: white;
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+    .blog-content-wrapper td {
+      padding: 1rem;
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-text-secondary);
+    }
+    .blog-content-wrapper tr:last-child td {
+      border-bottom: none;
+    }
+    .blog-content-wrapper .box, .blog-content-wrapper .callout, .blog-content-wrapper .success {
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      border-radius: 8px;
+      background: var(--color-bg-tertiary);
+      border-left: 4px solid var(--color-primary);
+    }
+    .blog-content-wrapper .success {
+      border-left-color: #10b981;
+      background: rgba(16, 185, 129, 0.1);
+    }
+    .blog-content-wrapper .quick-nav {
+      background: var(--color-bg-secondary);
+      padding: 2rem;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .blog-content-wrapper .quick-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0 0 0;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 0.75rem;
+    }
+    .blog-content-wrapper .quick-nav a {
+      color: var(--color-text-primary);
+      text-decoration: none;
+      display: block;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      transition: background 0.2s;
+    }
+    .blog-content-wrapper .quick-nav a:hover {
+      background: var(--color-bg-tertiary);
+    }
+    .blog-content-wrapper img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin: 2rem 0;
+    }
+    .blog-meta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .blog-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--color-text-muted);
+      font-size: 0.9rem;
+    }
+    .blog-meta-item i {
+      color: var(--color-primary);
+    }
+    .blog-tags {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--color-border);
+    }
+    .blog-tag {
+      background: var(--color-bg-secondary);
+      color: var(--color-text-primary);
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .blog-tag:hover {
+      background: var(--color-primary);
+      color: white;
+    }
+    .share-buttons {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+    .share-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      transition: transform 0.2s, opacity 0.2s;
+      text-decoration: none;
+    }
+    .share-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+    .share-btn.facebook { background: #1877f2; }
+    .share-btn.twitter { background: #000; }
+    .share-btn.linkedin { background: #0077b5; }
+    .share-btn.whatsapp { background: #25d366; }
+  </style>
+</head>
+<body class="site-shell">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div data-component="header"></div>
+  <main id="main-content">
+    <!-- Blog Header -->
+    <section class="page-banner">
+      <div class="container-wide">
+        <div class="page-banner-card stack-md">
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/index.html">Home</a>
+            <span>/</span>
+            <a href="/blog.html">Blog</a>
+            <span>/</span>
+            <span class="current">Zoho Cliq Deluge Code Backup</span>
+          </nav>
+          <span class="section-eyebrow">Install Now</span>
+          <h1>Zoho Cliq Deluge Code Backup</h1>
+          <p class="lead">Automate version control and backup for all your Zoho Cliq Deluge scripts. Learn why Zoho Cliq Deluge Code Backup is essential for developers and admins.</p>
+          <div class="blog-meta">
+            <div class="blog-meta-item">
+              <i class="fas fa-user"></i>
+              <span>Insta Web Works Editorial Team</span>
+            </div>
+            <div class="blog-meta-item">
+              <i class="fas fa-calendar"></i>
+              <span>2025-12-04</span>
+            </div>
+            <div class="blog-meta-item">
+              <i class="fas fa-clock"></i>
+              <span>10 min read</span>
+            </div>
+            <div class="blog-meta-item">
+              <i class="fas fa-tag"></i>
+              <span>Easy Pluginz</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Image -->
+    <section class="section-sm">
+      <div class="container-wide article-hero-image">
+        <img src="https://easy-pluginz.com/wp-content/uploads/2025/12/Deluge-Code-Backup-for-Cliq.jpg" alt="Zoho Cliq Deluge Code Backup" loading="lazy">
+      </div>
+    </section>
+
+    <!-- Blog Content -->
+    <section class="section">
+      <div class="container-wide content-grid">
+        <article class="blog-content-wrapper">
+          
+				<div class="elementor-widget-container">
+					<div class="bialty-container">		<div data-elementor-type="wp-post" data-elementor-id="5892" class="elementor elementor-5892" data-elementor-post-type="post">
+						<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-878b7e8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-eae-slider="38365" data-id="878b7e8" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-d7d992d" data-eae-slider="51075" data-id="d7d992d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-0edddd2 elementor-widget elementor-widget-text-editor" data-id="0edddd2" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h2 data-start="519" data-end="595"><strong data-start="521" data-end="595">Zoho Cliq Deluge Code Backup: The Essential Tool Every Zoho Team Needs</strong></h2><p data-start="597" data-end="878">For teams using <strong data-start="613" data-end="626">Zoho Cliq</strong>, automation is a big part of daily workflow&mdash;custom bots, commands, notifications, approvals, and integrations often depend on <strong data-start="753" data-end="771">Deluge scripts</strong>.<br data-start="772" data-end="775">But despite how critical this code is, Zoho offers <strong data-start="826" data-end="877">no built-in automatic backup or version history</strong>.</p><p data-start="880" data-end="959">This is where the importance of <strong data-start="912" data-end="944">Zoho Cliq Deluge Code Backup</strong> becomes clear.</p><p data-start="961" data-end="1192">If you rely on bots or automation, losing even one script can break internal communication or interrupt critical business processes. The good news? There&rsquo;s now a simple, automated way to ensure your Deluge code is always protected.</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-c3a949e elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-eae-slider="56306" data-id="c3a949e" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-e2cee45" data-eae-slider="31806" data-id="e2cee45" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6c2d19e elementor-widget elementor-widget-text-editor" data-id="6c2d19e" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h2 data-start="1199" data-end="1242">What Is Zoho Cliq Deluge Code Backup?</h2>
+<p data-start="1244" data-end="1432"><strong data-start="1244" data-end="1276">Zoho Cliq Deluge Code Backup</strong> is an automated extension (by Easy Pluginz) that securely saves every Deluge script used in Zoho Cliq.<br data-start="1379" data-end="1382">It creates timestamped backup versions so you can:</p>
+<p data-start="1434" data-end="1537">&#10004; Track changes<br data-start="1449" data-end="1452">&#10004; Restore old versions<br data-start="1474" data-end="1477">&#10004; Prevent accidental deletion<br data-start="1506" data-end="1509">&#10004; Protect automation logic</p>
+<p data-start="1539" data-end="1616">This means your entire scripting system is protected without any manual work.</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-8616b9c elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-eae-slider="61933" data-id="8616b9c" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fbd9045" data-eae-slider="26804" data-id="fbd9045" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-4ba3fa6 elementor-widget elementor-widget-text-editor" data-id="4ba3fa6" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h2 data-start="1199" data-end="1242">What Is Zoho Cliq Deluge Code Backup?</h2>
+<p data-start="1244" data-end="1432"><strong data-start="1244" data-end="1276">Zoho Cliq Deluge Code Backup</strong> is an automated extension (by Easy Pluginz) that securely saves every Deluge script used in Zoho Cliq.<br data-start="1379" data-end="1382">It creates timestamped backup versions so you can:</p>
+<p data-start="1434" data-end="1537">&#10004; Track changes<br data-start="1449" data-end="1452">&#10004; Restore old versions<br data-start="1474" data-end="1477">&#10004; Prevent accidental deletion<br data-start="1506" data-end="1509">&#10004; Protect automation logic</p>
+<p data-start="1539" data-end="1616">This means your entire scripting system is protected without any manual work.</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-7c3b148 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-eae-slider="8804" data-id="7c3b148" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-a21e9cd" data-eae-slider="12123" data-id="a21e9cd" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2fab263 elementor-widget elementor-widget-text-editor" data-id="2fab263" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h2 data-start="1623" data-end="1674">&#10060; Why Zoho Teams Face Risk Without Deluge Backup</h2>
+<p data-start="1676" data-end="1738">Most Zoho teams don&rsquo;t realize how fragile their automation is.</p>
+<p data-start="1740" data-end="1778">Here are the <strong data-start="1753" data-end="1777">most common problems</strong>:</p>
+<h4 data-start="1780" data-end="1828"><strong data-start="1784" data-end="1828">1&#65039;&#8419; Scripts Are Overwritten Accidentally</strong></h4>
+<p data-start="1829" data-end="1952">A developer updates the wrong workflow.<br data-start="1868" data-end="1871">A bot function breaks after a small change.<br data-start="1914" data-end="1917">A command no longer runs correctly.</p>
+<p data-start="1954" data-end="2021">Zoho does not track changes &mdash; once overwritten, the script is gone.</p>
+<h4 data-start="2023" data-end="2066"><strong data-start="2027" data-end="2066">2&#65039;&#8419; No Version Control in Zoho Cliq</strong></h4>
+<p data-start="2067" data-end="2232">Unlike other development environments, Zoho Cliq has no built-in versioning for Deluge code.<br data-start="2159" data-end="2162">This creates a dangerous situation for teams who update scripts often.</p>
+<h4 data-start="2234" data-end="2274"><strong data-start="2238" data-end="2274">3&#65039;&#8419; Entire Bots Can Stop Working</strong></h4>
+<p data-start="2275" data-end="2300">If a script connected to:</p>
+<ul data-start="2301" data-end="2362">
+<li data-start="2301" data-end="2310">
+<p data-start="2303" data-end="2310">polls</p>
+</li>
+<li data-start="2311" data-end="2328">
+<p data-start="2313" data-end="2328">notifications</p>
+</li>
+<li data-start="2329" data-end="2342">
+<p data-start="2331" data-end="2342">approvals</p>
+</li>
+<li data-start="2343" data-end="2362">
+<p data-start="2345" data-end="2362">custom commands</p>
+</li>
+</ul>
+<p data-start="2364" data-end="2405">&hellip;fails, your entire workflow chain fails.</p>
+<h4 data-start="2407" data-end="2458"><strong data-start="2411" data-end="2458">4&#65039;&#8419; Multi-Developer Teams Increase the Risk</strong></h4>
+<p data-start="2459" data-end="2601">When multiple admins or developers work inside Cliq, code conflicts are common.<br data-start="2538" data-end="2541">Without Zoho Cliq Deluge Code Backup, there&rsquo;s no safety net.</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-9c57bf7 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-eae-slider="32893" data-id="9c57bf7" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-f9bddd9" data-eae-slider="95264" data-id="f9bddd9" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-370122a elementor-widget elementor-widget-text-editor" data-id="370122a" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h2 data-start="2608" data-end="2665">How Zoho Cliq Deluge Code Backup Solves This Problem</h2>
+<p data-start="2667" data-end="2777">The extension provides <strong data-start="2690" data-end="2726">hands-free, automatic protection</strong> for all your Deluge scripts used inside Zoho Cliq.</p>
+<h4 data-start="2779" data-end="2826">1. Automatic Backup of Every Cliq Script</h4>
+<p data-start="2827" data-end="2926">The system automatically detects and saves Deluge-based bot functions, commands, and workflow code.</p>
+<h4 data-start="2928" data-end="2969">2. Version History with Timestamps</h4>
+<p data-start="2970" data-end="3102">Every time a script changes, a new version is added to your backup list.<br data-start="3042" data-end="3045">You can instantly view previous versions or compare them.</p>
+<h4 data-start="3104" data-end="3131">3. One-Click Restore</h4>
+<p data-start="3132" data-end="3199">If automation breaks, restore any version of your script instantly.</p>
+<h4 data-start="3201" data-end="3234">4. No Manual Export Needed</h4>
+<p data-start="3235" data-end="3334">Stop copy-pasting scripts into Google Docs or text files.<br data-start="3292" data-end="3295">The entire backup process is automated.</p>
+<h4 data-start="3336" data-end="3395">5. Perfect for Developers, Admins, and Zoho Partners</h4>
+<p data-start="3396" data-end="3535">Whether you&rsquo;re building bots, maintaining workflows, or managing multiple client Zoho accounts, this tool keeps all your script logic safe.</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-74913fe elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-eae-slider="23368" data-id="74913fe" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fcb5d3d" data-eae-slider="22187" data-id="fcb5d3d" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b2fa967 elementor-widget elementor-widget-text-editor" data-id="b2fa967" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h2 data-start="3542" data-end="3593">&#128204; Benefits of Using Zoho Cliq Deluge Code Backup</h2>
+<h4 data-start="3595" data-end="3619"><strong data-start="3599" data-end="3619">&#10004; Zero Code Loss</strong></h4>
+<p data-start="3620" data-end="3690">Your code remains protected even during accidental edits or deletions.</p>
+<h4 data-start="3692" data-end="3720"><strong data-start="3696" data-end="3720">&#10004; Faster Development</strong></h4>
+<p data-start="3721" data-end="3790">Developers can safely experiment without fear of breaking automation.</p>
+<h4 data-start="3792" data-end="3827"><strong data-start="3796" data-end="3827">&#10004; Better Team Collaboration</strong></h4>
+<p data-start="3828" data-end="3886">Admins and developers can track who changed what and when.</p>
+<h4 data-start="3888" data-end="3914"><strong data-start="3892" data-end="3914">&#10004; Reduced Downtime</strong></h4>
+<p data-start="3915" data-end="3982">If a workflow stops, restoring the last working version is instant.</p>
+<h4 data-start="3984" data-end="4007"><strong data-start="3988" data-end="4007">&#10004; Peace of Mind</strong></h4>
+<p data-start="4008" data-end="4058">Your automation engine&mdash;Deluge&mdash;is always backed up.</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-003434d elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-eae-slider="93133" data-id="003434d" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6143a5f" data-eae-slider="52005" data-id="6143a5f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-cba0ab5 elementor-widget elementor-widget-text-editor" data-id="cba0ab5" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h2 data-start="4065" data-end="4114">Who Should Use Zoho Cliq Deluge Code Backup?</h2>
+<p data-start="4116" data-end="4146">This extension is perfect for:</p>
+<h3 data-start="4148" data-end="4175">Zoho Developers</h3>
+<p data-start="4176" data-end="4214">Script protection and safe versioning.</p>
+<h3 data-start="4216" data-end="4239">Zoho Admins</h3>
+<p data-start="4240" data-end="4282">Maintain reliable automation without risk.</p>
+<h3 data-start="4284" data-end="4314">Teams Using Cliq Bots</h3>
+<p data-start="4315" data-end="4381">Ensure bot commands and notifications never fail due to code loss.</p>
+<h3 data-start="4383" data-end="4416">Zoho Partners &amp; Agencies</h3>
+<p data-start="4417" data-end="4476">Manage multiple client systems professionally and securely.</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-20b1bfb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-eae-slider="79789" data-id="20b1bfb" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-156c3f5" data-eae-slider="16861" data-id="156c3f5" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a1cfc6b elementor-cta--skin-classic elementor-animated-content elementor-bg-transform elementor-bg-transform-zoom-in elementor-widget elementor-widget-call-to-action" data-id="a1cfc6b" data-element_type="widget" data-widget_type="call-to-action.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-cta">
+							<div class="elementor-cta__content">
+				
+									<h2 class="elementor-cta__title elementor-cta__content-item elementor-content-item">
+						Get the Extension today!					</h2>
+				
+				
+									<div class="elementor-cta__button-wrapper elementor-cta__content-item elementor-content-item ">
+					<a class="elementor-cta__button elementor-button elementor-size-" href="https://marketplace.zoho.com/app/cliq/easy-deluge-code-backup-for-zoho-cliq" target="_blank" rel="noopener">
+						Install Now					</a>
+					</div>
+							</div>
+						</div>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-bec3054 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-eae-slider="69501" data-id="bec3054" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-9195bac" data-eae-slider="48761" data-id="9195bac" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="has_eae_slider elementor-section elementor-top-section elementor-element elementor-element-e15d438 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-eae-slider="92504" data-id="e15d438" data-element_type="section">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="has_eae_slider elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-70a003f" data-eae-slider="42830" data-id="70a003f" data-element_type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b639089 elementor-widget elementor-widget-text-editor" data-id="b639089" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<h2 data-start="4759" data-end="4817">Conclusion: Protect Your Bots, Workflows &amp; Automation</h2>
+<p data-start="4819" data-end="4999">Your Zoho Cliq automations run because your Deluge scripts run.<br data-start="4882" data-end="4885">When scripts are overwritten, deleted, or corrupted, your business operations slow down &mdash; or worse, stop entirely.</p>
+<p data-start="5001" data-end="5133"><strong data-start="5001" data-end="5033">Zoho Cliq Deluge Code Backup</strong> ensures that every script, every version, and every update is safely stored and easily recoverable.</p>
+<p data-start="5135" data-end="5234">It&rsquo;s not just a tool &mdash; it&rsquo;s an essential safety system for any team that uses Zoho Cliq automation.</p>
+<p data-start="5236" data-end="5365">&#128073; <strong data-start="5239" data-end="5285">Install the Extension on Zoho Marketplace:</strong><br data-start="5285" data-end="5288"><a class="decorated-link" href="https://marketplace.zoho.com/app/cliq/easy-deluge-code-backup-for-zoho-cliq" target="_new" rel="noopener" data-start="5288" data-end="5363">https://marketplace.zoho.com/app/cliq/easy-deluge-code-backup-for-zoho-cliq</a></p>
+<p data-start="5367" data-end="5463">&#128073; <strong data-start="5370" data-end="5402">Documentation &amp; Setup Guide:</strong><br data-start="5402" data-end="5405"><a class="decorated-link" href="https://easy-pluginz.com/deluge-code-backup/documentation/" target="_new" rel="noopener" data-start="5405" data-end="5463">https://easy-pluginz.com/deluge-code-backup/documentation/</a></p>
+<p data-start="5465" data-end="5562">Protect your code. Protect your automation.<br data-start="5508" data-end="5511">Start using <strong data-start="5523" data-end="5555">Zoho Cliq Deluge Code Backup</strong> today.</p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+		</div>
+				</div>
+				
+        </article>
+        
+        <!-- Sidebar with Table of Contents -->
+        <aside class="sidebar surface stack-md">
+          <h3>Table of Contents</h3>
+          <nav class="toc" aria-label="Table of contents" id="toc">
+            <!-- Auto-generated from H2 headings -->
+          </nav>
+          
+          <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--color-border);">
+            <h4>Share this article</h4>
+            <div class="share-buttons">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://instawebworks.com.au/blog/zoho-cliq-deluge-code-backup/" class="share-btn facebook" target="_blank" rel="noopener" aria-label="Share on Facebook">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/intent/tweet?url=https://instawebworks.com.au/blog/zoho-cliq-deluge-code-backup/&text=Zoho Cliq Deluge Code Backup" class="share-btn twitter" target="_blank" rel="noopener" aria-label="Share on Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://instawebworks.com.au/blog/zoho-cliq-deluge-code-backup/&title=Zoho Cliq Deluge Code Backup" class="share-btn linkedin" target="_blank" rel="noopener" aria-label="Share on LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a href="https://wa.me/?text=Zoho Cliq Deluge Code Backup%20https://instawebworks.com.au/blog/zoho-cliq-deluge-code-backup/" class="share-btn whatsapp" target="_blank" rel="noopener" aria-label="Share on WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section-sm">
+      <div class="container-wide" data-component="cta-section"></div>
+    </section>
+
+    <!-- Related Blogs -->
+    <section class="section">
+      <div class="container-wide">
+        <div class="section-header">
+          <div class="section-heading stack-md">
+            <span class="section-eyebrow">Related Articles</span>
+            <h2>Continue exploring more insights</h2>
+          </div>
+        </div>
+        <div class="grid grid-3" data-render="relatedBlogs"></div>
+      </div>
+    </section>
+  </main>
+  <div data-component="footer"></div>
+  
+  <script type="module">
+    // Auto-generate table of contents from H2 headings
+    document.addEventListener('DOMContentLoaded', () => {
+      const content = document.querySelector('.blog-content-wrapper');
+      const toc = document.getElementById('toc');
+      
+      if (!content || !toc) return;
+      
+      const headings = content.querySelectorAll('h2, h3');
+      if (headings.length === 0) {
+        toc.parentElement.style.display = 'none';
+        return;
+      }
+      
+      const tocHTML = Array.from(headings).map((heading, index) => {
+        const id = heading.id || `heading-${index}`;
+        heading.id = id;
+        const level = heading.tagName === 'H2' ? 'main' : 'sub';
+        const style = level === 'sub' ? 'padding-left: 1rem; font-size: 0.9em;' : '';
+        return `<a href="#${id}" style="${style}">${heading.textContent}</a>`;
+      }).join('');
+      
+      toc.innerHTML = tocHTML;
+      
+      // Update current year in footer
+      document.querySelectorAll('[data-current-year]').forEach(el => {
+        el.textContent = new Date().getFullYear();
+      });
+    });
+  </script>
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
